@@ -1,3 +1,35 @@
+int sum = 0;
+void setup()
+{
+  noLoop();
+  size(300,300); 
+  
+}
+void draw()
+{
+   background(0,0,0);
+  for (int i = 20 ; i <=150 ; i=i +60)
+   { for (int a = 10 ; a < 370 ; a = a+60)
+    {
+      Die skylar = new Die(a,i);
+      skylar.roll();
+      skylar.show();
+      sum= sum + skylar.randNum;
+    }
+  }
+ 
+text(sum,100,100);
+}
+ 
+
+
+void mousePressed()
+{
+  redraw();
+}
+class Die 
+{
+      int diceX, diceY,randNum;
   Die(int x, int y) 
   {
    diceX = x;
