@@ -1,11 +1,3 @@
-{
-  redraw();
-}
-class Die 
-{
-
-  
-      int diceX, diceY,randNum;
   Die(int x, int y) 
   {
    diceX = x;
